@@ -1,31 +1,35 @@
 const headerDiv = document.getElementById("headerId")
 
+const teams = {
+    Arsenal: 'logos/Arsenal.png',
+    AstonVilla: 'logos/Aston Villa.png',
+    Bournemouth: 'logos/Bournemouth.png',
+    Brentford: 'logos/Brentford.png',
+    BrightonHoveAlbion: 'logos/Brighton & Hove Albion.png',
+    Burnley: 'logos/Burnley.png',
+    Chelsea: 'logos/Chelsea.png',
+    CrystalPalace: 'logos/Crystal Palace.png',
+    Everton: 'logos/Everton.png',
+    Fulham: 'logos/Fulham.png',
+    Liverpool: 'logos/Liverpool.png',
+    LutonTown: 'logos/Luton Town.png',
+    ManchesterCity: 'logos/Manchester City.png',
+    ManchesterUnited: 'logos/Manchester United.png',
+    NewcastleUnited: 'logos/Newcastle United.png',
+    NotthinghamForest: 'logos/Nottingham Forest.png',
+    ShieffieldUnited: 'logos/Sheffield United.png',
+    Tottenham: 'logos/Tottenham.png',
+    WestHamUnited: 'logos/West Ham United.png',
+    Wolverhampton: 'logos/Wolverhampton.png'
+}
 
-const logoArray = ['logos/Arsenal.png',
-    'logos/Aston Villa.png',
-    'logos/Bournemouth.png',
-    'logos/Brentford.png',
-    'logos/Brighton & Hove Albion.png',
-    'logos/Burnley.png',
-    'logos/Chelsea.png',
-    'logos/Crystal Palace.png',
-    'logos/Everton.png',
-    'logos/Fulham.png',
-    'logos/Liverpool.png',
-    'logos/Luton Town.png',
-    'logos/Manchester City.png',
-    'logos/Manchester United.png',
-    'logos/Newcastle United.png',
-    'logos/Nottingham Forest.png',
-    'logos/Sheffield United.png',
-    'logos/Tottenham.png',
-    'logos/West Ham United.png',
-    'logos/Wolverhampton.png']
 
-for (let index = 0; index < logoArray.length; index++) {
+for (let team of teams) {
+    console.log(team);
     let img = document.createElement("IMG")
-    img.src = logoArray[index]
+    img.src = team
     img.className = "clubLogo"
     headerDiv.appendChild(img)
 }
+
 
