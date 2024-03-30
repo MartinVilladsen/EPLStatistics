@@ -47,7 +47,7 @@ getAsTable(url, requestOptions)
 async function get(url, options) {
     try {
         const response = await fetch(url, options);
-        
+
         if (response.status !== 200) {
             throw new Error(response.status);
         }
@@ -88,7 +88,7 @@ async function get(url, options) {
 async function getAsTable(url, options) {
     try {
         const response = await fetch(url, options);
-        
+
         if (response.status !== 200) {
             throw new Error(response.status);
         }
@@ -102,7 +102,7 @@ async function getAsTable(url, options) {
         // Headers
         const trNode = document.createElement('tr');
         tableNode.appendChild(trNode);
-        const headerArray = ['Rank','Club', '','Points'];
+        const headerArray = ['Rank', 'Club', '', 'Points'];
         for (header of headerArray) {
             const thNode = document.createElement('th');
             thNode.textContent = header;
@@ -116,7 +116,7 @@ async function getAsTable(url, options) {
             const name = data.response[0].league.standings[0][i].team.name;
             const points = data.response[0].league.standings[0][i].points;
 
-            
+
             const rankNode = document.createElement('td');
             let logoNode;
             const nameNode = document.createElement('td');
@@ -149,6 +149,52 @@ async function getAsTable(url, options) {
             trDataNode.appendChild(pointsNode);
 
         }
+
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+const url2 = 'https://api-football-v1.p.rapidapi.com/v3/players?team=40&league=39&season=2023';
+const options2 = {
+    method: 'GET',
+    headers: {
+        'X-RapidAPI-Key': '2408b529c9mshbe629054acc71b4p1f741ejsn2db3f8569668',
+        'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
+    }
+};
+
+player1(url2, options2)
+async function player1(url, options) {
+    try {
+        const response = await fetch(url, options);
+
+        if (response.status !== 200) {
+            throw new Error(response.status);
+        }
+
+        const data = await response.json();
+
+        const playerNode = document.getElementById('player1');
+
+
+        const playerPic = document.createElement("IMG");
+        playerPic.src = data.response[12].player.photo;
+        playerNode.appendChild(playerPic);
+
+        const playerData = document.createElement("p");
+
+        const playerName = data.response[12].player.name;
+        const playerPosition = data.response[12].statistics[0].games.position;
+        const playerAppearences = data.response[12].statistics[0].games.appearences;
+        const playerRating = data.response[12].statistics[0].games.rating;
+        console.log(playerPosition);
+
+        const playerInfo = `Name: ${playerName}<br>Position: ${playerPosition}<br>Appearences: ${playerAppearences}<br>Rating: ${playerRating}<br>`;
+        console.log(playerInfo);
+        playerData.innerHTML = playerInfo
+        playerNode.appendChild(playerData)
+
 
     } catch (error) {
         console.log(error);
