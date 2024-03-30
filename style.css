@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 .grid-container {
     display: grid;
     grid-template-columns: auto;
@@ -54,21 +56,39 @@
     gap: 10px;
 }
 
-.rank {
-    border-bottom: 1px solid grey;
+
+
+table {
+    border-collapse: collapse;
 }
 
 td {
     text-align: left;
     max-height: fit-content;
     max-width: fit-content;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 th {
     text-align: left;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+tr {
+    border-bottom: 1pt solid grey;
 }
 
 .logo-cell img {
     max-width: 50px;
     max-height: 50px;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
