@@ -1,0 +1,13 @@
+var myHeaders = new Headers();
+myHeaders.append("x-apisports-key", "1a2ea930e74fb5048eedc41f426cb1bc");
+myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
+
+let requestOptions = {
+    method: 'GET',
+    headers: myHeaders
+};
+
+const url = 'https://v3.football.api-sports.io/standings?season=2023&league=39';
+
+
+IK STJÆL MIN API KEY MARTIN

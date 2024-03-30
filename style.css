@@ -32,9 +32,10 @@
 
 .sidebar {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: 1fr;
     grid-area: sidebar;
+    font-size: 30px;
+    border-bottom: 4px dotted blue;
 }
 
 .footer {
@@ -51,6 +52,20 @@
     gap: 10px;
 }
 
-.rankNode {
-    font-size: 20px;
+.rank {
+    border-bottom: 1px solid grey;
+}
+
+td {
+    text-align: left;
+    max-height: fit-content;
+    max-width: fit-content;
+}
+
+th {
+    text-align: left;
+}
+.logo-cell img {
+    max-width: 50px;
+    max-height: 50px;
 }
