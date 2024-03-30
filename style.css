@@ -1,14 +1,42 @@
 .grid-container {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header header header"
+    "main main main main sidebar"
+    "footer footer footer footer footer";
     background-color: #2196F3;
     padding: 10px;
 }
 
-.grid-item {
+.grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.8);
     padding: 20px;
     font-size: 30px;
     text-align: center;
+}
+
+.header {
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+.players {
+    padding: 20px;
 }
