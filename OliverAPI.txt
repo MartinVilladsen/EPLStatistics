@@ -1,5 +1,5 @@
 var myHeaders = new Headers();
-myHeaders.append("x-apisports-key", "1a2ea930e74fb5048eedc41f426cb1bc");
+myHeaders.append("APIKEYSKJULT");
 myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
 
 let requestOptions = {
