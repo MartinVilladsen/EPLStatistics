@@ -32,7 +32,7 @@ for (let team in teams) {
 
 
 var myHeaders = new Headers();
-myHeaders.append("x-apisports-key", "1a2ea930e74fb5048eedc41f426cb1bc");
+myHeaders.append("x-apisports-key", "APIKEYSKJULT");
 myHeaders.append("x-rapidapi-host", "v3.football.api-sports.io");
 
 let requestOptions = {
@@ -159,7 +159,7 @@ const url2 = 'https://api-football-v1.p.rapidapi.com/v3/players?team=40&league=3
 const options2 = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '2408b529c9mshbe629054acc71b4p1f741ejsn2db3f8569668',
+        'X-RapidAPI-Key': 'APIKEYSKJULT',
         'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
     }
 };
